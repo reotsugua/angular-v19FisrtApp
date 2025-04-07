@@ -22,10 +22,16 @@
     <form [formGroup]="applyForm" (submit)="submitApplication()">
       <label for="first-name">First Name</label>
       <input id="first-name" type="text" formControlName="firstName" />
+      <div *ngIf="applyForm.get('firstName')?.invalid && (submitted || applyForm.get('firstName')?.touched)">
+        O nome é obrigatório.
+      </div>
       <label for="last-name">Last Name</label>
       <input id="last-name" type="text" formControlName="lastName" />
       <label for="email">Email</label>
       <input id="email" type="email" formControlName="email" />
+      <div *ngIf="applyForm.get('email')?.invalid && (submitted || applyForm.get('email')?.touched)">
+        Digite um endereço de email válido.
+      </div>
       <button type="submit" class="primary">Apply now</button>
     </form>
   </section>
