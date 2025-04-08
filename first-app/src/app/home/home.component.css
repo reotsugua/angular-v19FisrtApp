@@ -6,7 +6,7 @@
     margin-top: 50px;
     justify-content: space-around;
   }
-  input[type="text"] {
+  input[type="search"] {
     border: solid 1px var(--primary-color);
     padding: 10px;
     border-radius: 8px;
